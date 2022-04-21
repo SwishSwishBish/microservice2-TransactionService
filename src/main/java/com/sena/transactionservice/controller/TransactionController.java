@@ -19,12 +19,12 @@ public class TransactionController {
         return new ResponseEntity<>(transactionService.saveTransaction(transaction), HttpStatus.CREATED);
     }
 
-    @DeleteMapping
+    @DeleteMapping("{transactionId}")
     public ResponseEntity<?> deleteTransaction(@PathVariable Long transactionId) {
         transactionService.deleteTransaction(transactionId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-    @GetMapping
+    @GetMapping("{userId}")
     public ResponseEntity<?> findAllTransaction(@PathVariable Long userId){
         return ResponseEntity.ok(transactionService.findAllTransaction(userId));
     }

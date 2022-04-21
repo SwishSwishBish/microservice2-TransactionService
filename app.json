@@ -1,0 +1,9 @@
+{
+  "name": "sena-microservice2-transaction",
+  "buildpacks": [
+    {
+      "url": "heroku/gradle"
+    }
+  ],
+  "expo": {}
+}

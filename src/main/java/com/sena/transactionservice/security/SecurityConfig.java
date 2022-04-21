@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic();
         http.csrf().disable();
-        http.authorizeRequests().antMatchers("/h2-console/**").permitAll()
+        http.authorizeRequests().antMatchers("/h2-console/**").permitAll() //unethical situation
                 .anyRequest().authenticated();
         http.headers().frameOptions().sameOrigin();
     }
